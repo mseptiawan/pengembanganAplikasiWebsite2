@@ -1,0 +1,22 @@
+
+    <% let title ="template engine" %>
+    <%= title %> <br>
+    <%= caption  %>
+    <table>
+        <tr>
+            <th>no</th>
+            <th>npm</th>
+            <th>nama</th>
+            <th>foto</th>
+
+        </tr>
+        <% data.forEach((element,no) => { %>
+            <tr>
+                <td><%= no+=1 %></td>
+                <td><%= element.npm %></td>
+                <td><%= element.nama %></td>
+          <td><img src="<%= element.image %>" alt="<%= element.nama %>" style="width: 50px; height: auto;"></td>
+
+            </tr>
+        <%}); %>
+    </table>
